@@ -5,7 +5,7 @@ export default function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg">
         <a className="navbar-brand" href="#">
-       
+       E-shop
         </a>
         <button
           className="navbar-toggler"
