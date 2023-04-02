@@ -1,8 +1,8 @@
 import React from "react";
-import Products from "../Product";
 import { Link, useParams } from "react-router-dom";
 
 export default function ProductDescScreen() {
+  const Products = [];
   const productid = useParams();
   const product = Products.find((product) => product.id == productid.id);
   console.log(product);
@@ -27,7 +27,7 @@ export default function ProductDescScreen() {
                 return <option value={i + 1}>{i + 1}</option>;
               })}
             </select>
-            <hr/>
+            <hr />
             <button className="btn btn-dark">ADD TO CART</button>
           </div>
         </div>

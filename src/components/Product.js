@@ -10,7 +10,7 @@ const colors = {
 
 export default function Product({ product }) {
   return (
-    <div className="col-md-3 m-5 card p-2 text-start">
+    <div className="text-start">
       <Link to={`product/${product.id}`}>
         <img src={product.image} className="img-fluid" />
         <h1> {product.name}</h1>
