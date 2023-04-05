@@ -4,6 +4,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../actions/productActions";
+import Loader from "../components/Loader";
+import Error from "../components/Error";
+import Filter from "../components/Filter";
 
 export default function HomeScreen() {
   const getallproductsstate = useSelector(
@@ -19,15 +22,16 @@ export default function HomeScreen() {
 
   return (
     <div>
+      <Filter />
       <div className="row justify-content-center">
         {loading ? (
-          <h1>loading..</h1>
+          <Loader />
         ) : error ? (
-          <h1>Something went wrong</h1>
+          <Error error="Something went wrong.." />
         ) : (
           products.map((product) => {
             return (
-              <div className="col-md-3 m-2 p-2">
+              <div className="col-md-3 m-2 p-2 card">
                 <Product product={product} />
               </div>
             );

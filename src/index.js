@@ -2,9 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import "bootstrap/dist/js/bootstrap.js";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./store";
+import "./style/Navbar.css";
+import "./style/Style.css";
+import "./style/footer.css";
+import "./style/reviews.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
